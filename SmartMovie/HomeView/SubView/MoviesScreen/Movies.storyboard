@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="9V6-8O-c46">
+            <objects>
+                <viewController storyboardIdentifier="MoviesViewController" id="y4A-28-eOd" customClass="MoviesViewController" customModule="SmartMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91r-Gs-9OB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-b4-XUZ">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dW2-dG-cht">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="XV4-wn-SGG">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eoV-gc-p23"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XV4-wn-SGG" firstAttribute="trailing" secondItem="eoV-gc-p23" secondAttribute="trailing" id="1Pj-tm-5Uq"/>
+                            <constraint firstAttribute="bottom" secondItem="XV4-wn-SGG" secondAttribute="bottom" id="GqJ-9L-scm"/>
+                            <constraint firstItem="XV4-wn-SGG" firstAttribute="leading" secondItem="eoV-gc-p23" secondAttribute="leading" id="Lgd-cA-fdw"/>
+                            <constraint firstItem="eoV-gc-p23" firstAttribute="trailing" secondItem="Ka5-b4-XUZ" secondAttribute="trailing" id="gHK-6r-0Uv"/>
+                            <constraint firstItem="Ka5-b4-XUZ" firstAttribute="leading" secondItem="eoV-gc-p23" secondAttribute="leading" id="ggG-sl-fSd"/>
+                            <constraint firstItem="Ka5-b4-XUZ" firstAttribute="top" secondItem="eoV-gc-p23" secondAttribute="top" id="law-Up-TbS"/>
+                            <constraint firstItem="eoV-gc-p23" firstAttribute="bottom" secondItem="Ka5-b4-XUZ" secondAttribute="bottom" id="mTp-Vr-Ju5"/>
+                            <constraint firstItem="XV4-wn-SGG" firstAttribute="top" secondItem="eoV-gc-p23" secondAttribute="top" id="nEm-I3-Vlx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="za1-OA-CYs"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="XV4-wn-SGG" id="Gaa-Sc-spz"/>
+                        <outlet property="moviesCollectionView" destination="Ka5-b4-XUZ" id="GbO-4K-5uC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s8r-vr-0Bd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1492.3664122137404" y="347.88732394366201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
